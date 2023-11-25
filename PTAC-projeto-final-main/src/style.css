@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.grid {
+    background-color: rgb(190, 190, 190);
+    height: 100px;
+}
+
+.navbar-itens {
+    margin: 5% 90% 0 0;
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+}
