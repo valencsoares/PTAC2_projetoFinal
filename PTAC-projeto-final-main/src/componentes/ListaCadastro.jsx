@@ -36,7 +36,16 @@ export default function ListaCadastro(){
         <body>
             <Menu/>
             <div class="cadastro">
-                <h1>Cadastre já!</h1>
+            <h1>Lista de livros para ler!</h1>
+            <form onSubmit={salvar}>
+                <input placeholder="adicione o título" type="text" value={titulo} onChange={(e)=>{setTitulo(e.target.value)}}/>
+                <input placeholder="adicione a descrição" type="text" value={descricao} onChange={(e)=>{setDescricao(e.target.value)}}/>
+                <div>
+                    <button class="add">Adicionar</button>
+                </div>    
+            </form>
+
+            )}
             </div>
         </body>
      );
