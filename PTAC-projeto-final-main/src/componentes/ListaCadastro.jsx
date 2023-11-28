@@ -45,6 +45,17 @@ export default function ListaCadastro(){
                 </div>    
             </form>
 
+            {/* lista na tela */}
+            {listaVideos.map((ativ)=>
+                <div class="cardd" key={ativ.id}>
+                    <div class="card">
+                        <div>
+                                <p class="titulo">{ativ.titulo}</p>
+                                <p><span>Descrição:</span> {ativ.descricao}</p>
+                        </div>
+                    </div>
+                    <button class="delete" onClick={() => remover(ativ.id)}>Remover</button>
+                </div>
             )}
             </div>
         </body>
