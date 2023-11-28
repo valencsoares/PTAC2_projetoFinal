@@ -1,6 +1,6 @@
 body {
     height: 1000px;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     margin: 0;
     font-family: "Gill Sans", sans-serif;
 }
@@ -12,25 +12,26 @@ body {
     padding: 0;
     float: left;
     font: 12px Verdana, sans-serif;
-    background-color: #ffffff;
+    background-color: #8544fd;
+    border-right: 3px solid rgb(213, 213, 213);
 }
 
-.menu ul li {
+.menu li {
     margin: 0; 
     padding: 0px;
-    border-bottom: 1px solid #d50000a3;
+    border-bottom: 1px solid rgb(213, 213, 213);
     text-align: left;
     list-style-type: none;
 }
 
 .menu a:link {
-    background: #ffffff;
+    background: #8544fd;
     font-weight: bold;
     text-decoration: none;
     padding: 8px;
-    display: block;
+    display: grid;
 }
 
-h1 {
+.cadastro h1 {
     margin: 0;
 }
