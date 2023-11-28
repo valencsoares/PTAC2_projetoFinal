@@ -21,6 +21,17 @@ export default function ListaCadastro(){
         console.log(listaVideos)
     };
 
+    //função de remover
+    const remover = (id) => {
+        const auxLista = [];
+        listaVideos.map((listaVideos) => {
+            if (listaVideos.id !== id) {
+                auxLista.push(listaVideos);
+            }
+        });
+        setListaVideos(auxLista);
+    }
+
     return(
         <body>
             <Menu/>
