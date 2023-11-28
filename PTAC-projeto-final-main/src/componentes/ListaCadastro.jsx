@@ -21,17 +21,6 @@ export default function ListaCadastro(){
         console.log(listaVideos)
     };
 
-    //função de remover
-    const remover = (id) => {
-        const auxLista = [];
-        listaVideos.map((listaVideos) => {
-            if (listaVideos.id !== id) {
-                auxLista.push(listaVideos);
-            }
-        });
-        setListaVideos(auxLista);
-    }
-
     return(
         <body>
             <Menu/>
@@ -54,7 +43,6 @@ export default function ListaCadastro(){
                                 <p><span>Descrição:</span> {ativ.descricao}</p>
                         </div>
                     </div>
-                    <button class="delete" onClick={() => remover(ativ.id)}>Remover</button>
                 </div>
             )}
             </div>
