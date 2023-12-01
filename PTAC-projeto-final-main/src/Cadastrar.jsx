@@ -2,10 +2,13 @@ import Menu from "./componentes/Menu.jsx";
 import "./style.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import {Link} from "react-router-dom";
 
 export default function Cadastrar(){
-    const listaVideosSalva = localStorage.getItem("ListaVideos")
-    const [listaVideos, setListaVideos] = useState(JSON.parse(listaVideosSalva) || []);
+    const listaVideosSalva = JSON.parse(localStorage.getItem("ListaVideos"))|| [];   
+    const [listaVideos, setListaVideos] = useState(listaVideosSalva);
+    const [video, setVideo] = useState("");
+    const [url, setURL] = useState("");
     const [titulo, setTitulo] = useState("");
     const [descricao, setDescricao] = useState("");
     const [id, setId] = useState(listaVideosSalva [listaVideosSalva.length - 1]?.id + 1 || 1);
@@ -16,9 +19,10 @@ export default function Cadastrar(){
     const salvar = (e) =>{
         e.preventDefault(); //não recarregar a página
         setListaVideos([...listaVideos, { //"..." serve para pegar tudo que tem na lista e add algo a mais
-            titulo:titulo, descricao:descricao, id:id
+            video:video, url:url, titulo:titulo, descricao:descricao, id:id
         }]); 
         //para fazer com que apague as informações do input quando chamar a função
+        setVideo("")
         setTitulo("")
         setDescricao("")
         setId(id + 1)
