@@ -7,8 +7,6 @@ export default function Home(){
         <body>
             <Menu/>
             {listaVideosSalva.map((ativ) => <Card ativ = {ativ}/>)}
-
-
         </body> 
      );
 }

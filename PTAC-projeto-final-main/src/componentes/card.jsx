@@ -1,4 +1,5 @@
 import "./../style.css";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function Card({ativ}){
 const idDoVideo = ativ.url.slice(17)
@@ -16,7 +17,9 @@ const idDoVideo = ativ.url.slice(17)
             allowFullScreen
         ></iframe>
             <div>
-                <p class="titulo">{ativ.titulo}</p>
+                <Link to={`/video/${ativ.id}`}>
+                    <p class="titulo">{ativ.titulo}</p>
+                </Link> {/* //essa linha cria um link que leva o usuário para a rota prescrita, onde :identidade será substituído pelo valor da propriedade identidade da atividade atual.  */}
                 <p><span>Descrição:</span> {ativ.descricao}</p>
             </div>
         </div>
