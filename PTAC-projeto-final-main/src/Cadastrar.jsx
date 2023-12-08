@@ -2,7 +2,7 @@ import Menu from "./componentes/Menu.jsx";
 import "./style.css";
 import { useState } from "react";
 import { useEffect } from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function Cadastrar(){
     const listaVideosSalva = JSON.parse(localStorage.getItem("ListaVideos"))|| [];   
@@ -15,18 +15,19 @@ export default function Cadastrar(){
     /* estados */
 
     useEffect(() => { localStorage.setItem("ListaVideos", JSON.stringify(listaVideos)) }, [listaVideos]);
+    const navigate = useNavigate();
 
-    const salvar = (e) =>{
+    const salvar = async (e) =>{
         e.preventDefault(); //não recarregar a página
-        setListaVideos([...listaVideos, { //"..." serve para pegar tudo que tem na lista e add algo a mais
-            video:video, url:url, titulo:titulo, descricao:descricao, id:id
+        await setListaVideos([...listaVideos, { //"..." serve para pegar tudo que tem na lista e add algo a mais
+            url:url, titulo:titulo, descricao:descricao, id:id
         }]); 
         //para fazer com que apague as informações do input quando chamar a função
         setVideo("")
         setTitulo("")
         setDescricao("")
         setId(id + 1)
-        console.log(listaVideos)
+        navigate("/") //acionar a pagina da home
     };
 
     return(
