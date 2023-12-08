@@ -7,7 +7,6 @@ import {Link, useNavigate} from "react-router-dom";
 export default function Cadastrar(){
     const listaVideosSalva = JSON.parse(localStorage.getItem("ListaVideos"))|| [];   
     const [listaVideos, setListaVideos] = useState(listaVideosSalva);
-    const [video, setVideo] = useState("");
     const [url, setURL] = useState("");
     const [titulo, setTitulo] = useState("");
     const [descricao, setDescricao] = useState("");
@@ -23,9 +22,9 @@ export default function Cadastrar(){
             url:url, titulo:titulo, descricao:descricao, id:id
         }]); 
         //para fazer com que apague as informações do input quando chamar a função
-        setVideo("")
         setTitulo("")
         setDescricao("")
+        setURL("")
         setId(id + 1)
         navigate("/") //acionar a pagina da home
     };
@@ -36,7 +35,7 @@ export default function Cadastrar(){
         <div class="cadastro">
         <h1>Lista de livros para ler!</h1>
         <form onSubmit={salvar}>
-            <input placeholder="adicione a url do vídeo" type="text" value={video} onChange={(e)=>{setVideo(e.target.value)}}/>
+            <input placeholder="adicione a url do vídeo" type="text" value={url} onChange={(e)=>{setURL(e.target.value)}}/>
             <input placeholder="adicione o título" type="text" value={titulo} onChange={(e)=>{setTitulo(e.target.value)}}/>
             <input placeholder="adicione a descrição" type="text" value={descricao} onChange={(e)=>{setDescricao(e.target.value)}}/>
             <div>
