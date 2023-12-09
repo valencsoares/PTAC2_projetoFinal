@@ -7,6 +7,12 @@ export default function Home(){
     return(
         <body>         
             <Navbar/>  
+            <div className="container">
+                <Menu/>
+                <div className="Cardss">
+                    {listaVideosSalva.map((ativ) => <Card ativ = {ativ}/>)}
+                </div>
+            </div>
         </body> 
      );
 }

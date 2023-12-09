@@ -34,14 +34,14 @@ export default function Cadastrar(){
         <div className="container">
             <Navbar/>
             <Menu/>
-        <div class="cadastro">
-        <h1>Lista de livros para ler!</h1>
+        <div className="cadastro">
+        <h1>Cadastre quantos videos quiser!</h1>
         <form onSubmit={salvar}>
             <input placeholder="adicione a url do vídeo" type="text" value={url} onChange={(e)=>{setURL(e.target.value)}}/>
             <input placeholder="adicione o título" type="text" value={titulo} onChange={(e)=>{setTitulo(e.target.value)}}/>
             <input placeholder="adicione a descrição" type="text" value={descricao} onChange={(e)=>{setDescricao(e.target.value)}}/>
             <div>
-                <button class="add">Adicionar</button>
+                <button className="add">Adicionar</button>
             </div>    
         </form>
         </div>

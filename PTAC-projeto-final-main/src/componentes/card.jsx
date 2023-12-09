@@ -5,8 +5,8 @@ export default function Card({ativ}){
 const idDoVideo = ativ.url.slice(17)
 
   return(
-  <div class="cardd" key={ativ.id}>
-        <div class="card">
+  <div className="cardd" key={ativ.id}>
+        <div className="card">
         <iframe
             width="300"
             height="200"
@@ -18,7 +18,7 @@ const idDoVideo = ativ.url.slice(17)
         ></iframe>
             <div>
                 <Link to={`/video/${ativ.id}`}>
-                    <p class="titulo">{ativ.titulo}</p>
+                    <p className="titulo">{ativ.titulo}</p>
                 </Link> {/* //essa linha cria um link que leva o usuário para a rota prescrita, onde :identidade será substituído pelo valor da propriedade identidade da atividade atual.  */}
                 <p><span>Descrição:</span> {ativ.descricao}</p>
             </div>

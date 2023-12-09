@@ -1,7 +1,7 @@
 import "./../style.css";
 export default function Menu(){
     return(
-            <div class="menu">
+            <div className="menu">
                 <ul>
                     <li><a href="/">Página principal</a></li>
                     <li><a href="/destaques">Destaques</a></li>
