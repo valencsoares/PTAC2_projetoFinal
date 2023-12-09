@@ -1,4 +1,5 @@
 import Menu from "./componentes/Menu.jsx";
+import Navbar from "./componentes/navbar.jsx";
 import "./style.css";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -30,7 +31,8 @@ export default function Cadastrar(){
     };
 
     return(
-        <div>
+        <div className="container">
+            <Navbar/>
             <Menu/>
         <div class="cadastro">
         <h1>Lista de livros para ler!</h1>
