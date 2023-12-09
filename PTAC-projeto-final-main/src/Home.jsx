@@ -9,7 +9,7 @@ export default function Home(){
             <Navbar/>  
             <div className="container">
                 <Menu/>
-                <div className="Cardss">
+                <div className="cards">
                     {listaVideosSalva.map((ativ) => <Card ativ = {ativ}/>)}
                 </div>
             </div>

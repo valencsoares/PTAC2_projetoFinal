@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import Card from "./componentes/card.jsx";
 import Menu from "./componentes/Menu.jsx";
 import Navbar from "./componentes/navbar.jsx";
+import "./style.css"
 
 export default function Video(){
 const {id} = useParams();
@@ -22,7 +23,9 @@ console.log(id)
             <Navbar/>    
             <div className="container">
                 <Menu/>
-                <Card ativ={atividade[0]}/>
+                <div className="videoCard">
+                    <Card ativ={atividade[0]}/>
+                </div>
             </div>
         </body>
     ) 
