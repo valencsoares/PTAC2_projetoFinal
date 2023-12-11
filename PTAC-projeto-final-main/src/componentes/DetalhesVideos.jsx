@@ -21,7 +21,7 @@ const idDoVideo = ativ.url.slice(17)
                 <p className="tituloVideo">{ativ.titulo}</p>
                 <p className="descVideo">{ativ.descricao}</p>
                 <div className="boxDetalhes">
-                    <p><span className="tempoVideo">Descrição: </span>{ativ.tempo}</p>
+                    <p><span className="tempoVideo">Duração do vídeo: </span>{ativ.tempo}</p>
                     <p><span className="dataVideo">Data: </span>{ativ.data}</p>
                     <p><span className="canalVideo">Canal: </span>{ativ.canal}</p>
                 </div>
