@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import Card from "./componentes/card.jsx";
 import Menu from "./componentes/Menu.jsx";
 import Navbar from "./componentes/navbar.jsx";
+import DetalhesVideos from "./componentes/DetalhesVideos.jsx";
 import "./style.css"
 
 export default function Video(){
@@ -24,7 +25,7 @@ console.log(id)
             <div className="container">
                 <Menu/>
                 <div className="videoCard">
-                    <Card ativ={atividade[0]}/>
+                    <DetalhesVideos ativ={atividade[0]}/>
                 </div>
             </div>
         </body>
