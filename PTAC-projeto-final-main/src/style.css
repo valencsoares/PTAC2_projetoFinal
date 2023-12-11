@@ -65,7 +65,7 @@ nav {
     box-shadow: 0 1px 5px rgb(199, 199, 199);
 }
 
-iframe {
+.iframeVideo {
     border-radius: 4% 4% 0 0;
 }
 
@@ -92,4 +92,43 @@ button {
 .videoCard {
     float: right;
     width: 79%;
+}
+
+.paginaVideo {
+    display: flex;
+    margin-top: 2%;
+    flex-direction: column;
+    border: 2px solid #ccc;
+    width: 80%;
+  }
+  
+.divVideo {
+    flex: 1;
+  }
+  
+.divDetalhes {
+    flex: 1;
+  }
+
+.tituloVideo {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 30px 0 0 3%;
+}  
+
+.descVideo {
+    font-size: 15px;
+    width: 93.5%;
+    margin: 1% 0 3% 3%;
+}
+
+.tempoVideo, .dataVideo, .canalVideo {
+    font-weight: bold;
+    margin-left: 2%;
+}
+
+.boxDetalhes {
+    border: 2px solid #ccc;
+    width: 93.5%;
+    margin: 0 0 3% 3%;
 }
