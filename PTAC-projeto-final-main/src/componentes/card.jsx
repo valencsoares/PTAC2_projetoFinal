@@ -7,6 +7,7 @@ const idDoVideo = ativ.url.slice(17)
   return(
   <div className="card" key={ativ.id}>
         <iframe
+            className="iframeVideo"
             width="100%"
             height="200"
             src={`https://www.youtube.com/embed/${idDoVideo}`}
@@ -19,7 +20,7 @@ const idDoVideo = ativ.url.slice(17)
                 <Link to={`/video/${ativ.id}`}>
                     <p className="titulo">{ativ.titulo}</p>
                 </Link> {/* //essa linha cria um link que leva o usuário para a rota prescrita, onde :identidade será substituído pelo valor da propriedade identidade da atividade atual.  */}
-                <p><span>Descrição:</span> {ativ.descricao}</p>
+                <p><span>Data: </span>{ativ.data}</p>
             </div>
     </div>
   )

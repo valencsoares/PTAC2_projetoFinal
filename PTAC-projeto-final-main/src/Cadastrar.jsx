@@ -44,12 +44,12 @@ export default function Cadastrar(){
             <h1 className="texto">Cadastre quantos videos quiser!</h1>
             <form onSubmit={salvar}>
                 <div className="barras">
-                    <input placeholder="adicione o nome do canal do vídeo" type="text" value={canal} onChange={(e)=>{setURL(e.target.value)}}/>
+                    <input placeholder="adicione o nome do canal do vídeo" type="text" value={canal} onChange={(e)=>{setCanal(e.target.value)}}/>
                     <input placeholder="adicione a url do vídeo" type="text" value={url} onChange={(e)=>{setURL(e.target.value)}}/>
                     <input placeholder="adicione o título" type="text" value={titulo} onChange={(e)=>{setTitulo(e.target.value)}}/>
                     <input placeholder="adicione a descrição" type="text" value={descricao} onChange={(e)=>{setDescricao(e.target.value)}}/>
-                    <input placeholder="adicione o tempo de duração do vídeo (99:99:99)" type="text" value={tempo} onChange={(e)=>{setURL(e.target.value)}}/>
-                    <input placeholder="adicione a data de publicação do vídeo (99/99/9999)" type="text" value={data} onChange={(e)=>{setURL(e.target.value)}}/>
+                    <input placeholder="adicione o tempo de duração do vídeo (99:99:99)" type="text" value={tempo} onChange={(e)=>{setTempo(e.target.value)}}/>
+                    <input placeholder="adicione a data de publicação do vídeo (99/99/9999)" type="text" value={data} onChange={(e)=>{setData(e.target.value)}}/>
                 </div>
                 <div>
                     <button className="add">Cadastrar</button>
